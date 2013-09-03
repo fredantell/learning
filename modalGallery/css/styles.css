@@ -1,0 +1,54 @@
+.Absolute-Center {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+div#galleryContainer {
+    height: 441px;
+    background: grey;
+    overflow: hidden;
+    width: 960px;
+    border-radius: 10px;
+
+
+}
+ul {
+    padding: 20px;
+}
+li {
+    float: left;
+    width: 200px;
+    list-style-type: none;
+    display: block;
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+
+
+}
+img {
+    /* margin: -98px 0 0 -210px; */
+    /* top: 0px; */
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
