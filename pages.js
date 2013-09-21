@@ -71,6 +71,61 @@ var buildPageIndex = function() {
 
   return html;
 };
+
+var buildPageAbout = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
+var buildPageArtists = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
+var buildPagePrivacyPolicy = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
+var buildPageRegister = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
+var buildPageSchedule = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
+var buildPageVenueTravel = function() {
+  var html = '' +
+  buildHeader('index') +
+  buildBodyIndex() +
+  buildFooter();
+
+  return html;
+};
+
 var buildPage404 = function() {
   var html = '' +
   buildHeader('404 page not found') +
@@ -97,6 +152,12 @@ var buildPageFredrik = function() {
 exports.createPage = function(key) {
   var pageFns = {
     index: buildPageIndex,
+    about: buildPageAbout,
+    artists: buildPageArtists,
+    privacypolicy: buildPagePrivacyPolicy,
+    register: buildPageRegister,
+    schedule: buildPageSchedule,
+    venuetravel: buildPageVenueTravel,
     fredrik: buildPageFredrik
   };
 
