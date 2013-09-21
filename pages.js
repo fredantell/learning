@@ -1,17 +1,39 @@
-// var buildData = function() {
-//   var data = require('./data.json');
-//   var html = '' +
-//   '<div>' +
-//   JSON.stringify(data) +
-//   '</div>';
-//   return html;
-// };
+//--------------------------------------
+//--------------------------------------
+//----Aux functions for use in----------
+//-----builder functions below----------
+//--------------------------------------
+//--------------------------------------
 
-//-------------------------------
-//----Builders for page sections-
-//-------------------------------
+var getArtistsObj = function() {
+  // realistically this would be replaced with a http
+  // request instead of reading the file directly
+  // since in a production environment the server would
+  // be generating the JSON and it wouldn't be a static file
+  // sitting there waiting to be included with require()
+  var artists = require('./public/mock_api/artists.json');
+  artists = artists.artists;
+  return artists;
+};
 
-var buildHeader = function(pageTitle) {
+var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
+  var html = '';
+  arrayOfArtistObjs.forEach(function(artistObj) {
+    html += '\n' +
+    '<li><a href="artists/' + artistObj.shortname +
+    '">' + artistObj.name + '</a></li>';
+  });
+
+  return html;
+};
+
+//--------------------------------------
+//--------------------------------------
+//----Builders for page sections--------
+//--------------------------------------
+//--------------------------------------
+
+var buildHTMLHead = function(pageTitle) {
   pageTitle = pageTitle || '';
 
   var html = '' +
@@ -26,10 +48,56 @@ var buildHeader = function(pageTitle) {
 
   return html;
 };
+var buildHeader = function() {
+  var html = '' +
+  '<div class="content row">' +
+  '  <div class="col-lg-12">' +
+  '    <header class="clearfix">' +
+
+  '      <section id="branding">' +
+  '        <a href="home"><img src="img/misc/ralogo_monogram.png" alt="Logo for Roux Conference"></a>' +
+  '      </section><!-- branding -->' +
+
+  '      <section class="navbar navbar-default">' +
+  '        <ul class="nav navbar-nav">' +
+  '          <li><a href="home">Home</a></li>' +
+  '          <li><a href="venuetravel">Venue/Travel</a></li>' +
+  '          <li><a href="schedule">Schedule</a></li>' +
+  '          <li class="dropdown">' +
+  '            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All artists<span class="caret"></span></a>' +
+  '            <ul class="dropdown-menu">' +
+  '              <li><a href="artists">All artists</a></li>' +
+  '              <li class="divider"></li>' +
+                 listOfIndividualArtistLIs(getArtistsObj()) +
+  '            </ul><!-- dropdown menu -->' +
+  '          </li><!-- dropdown class -->' +
+  '          <li><a href="register">Register</a></li>' +
+  '        </ul><!-- nav -->' +
+  '      </section><!-- navbar -->' +
+
+  '    </header><!-- clearfix header -->' +
+  '  </div><!-- column -->' +
+  '</div><!-- content -->';
+
+  return html;
+};
 
 var buildFooter = function() {
   var html = '' +
+  // '<section class="container">' +
+  '  <footer class="content row">' +
+  '    <nav class="col-lg-12">' +
+  '      <ul class="breadcrumb">' +
+  '        <li><a href="about">About the Roux Academy</a></li>' +
+  '        <li><a href="privacypolicy">Privacy Policy</a></li>' +
+  '        <li><a href="http://rouxacademy.com">Roux Academy Website</a></li>' +
+  '      </ul>' +
+  '    </nav>' +
+  '  </footer>' +
+  // '</section><!-- footer container -->' +
   '<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>' +
+  '<script src="lib/bootstrap/js/bootstrap.js"></script>' +
+  '<script src="/js/myscript.js"></script>' +
   '</body>' +
   '</html>';
 
@@ -57,115 +125,145 @@ var buildBodyIndex = function() {
 
 };
 
+//--------------------------------------
+//--------------------------------------
+//---Potential Data for JSON------------
+//-------(Mock API)---------------------
+//--------------------------------------
+//--------------------------------------
 
 
-//-------------------------------
-//----Builders for whole pages---
-//-------------------------------
 
-var buildPageIndex = function() {
+//--------------------------------------
+//--------------------------------------
+//----Builders for whole pages----------
+//--------------------------------------
+//--------------------------------------
+
+var buildPageIndex = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPageAbout = function() {
+var buildPageAbout = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPageArtists = function() {
+var buildPageArtists = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPagePrivacyPolicy = function() {
+var buildPagePrivacyPolicy = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPageRegister = function() {
+var buildPageRegister = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPageSchedule = function() {
+var buildPageSchedule = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPageVenueTravel = function() {
+var buildPageVenueTravel = function(pageURL) {
   var html = '' +
-  buildHeader('index') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   buildBodyIndex() +
   buildFooter();
 
   return html;
 };
 
-var buildPage404 = function() {
+var buildPage404 = function(pageURL) {
   var html = '' +
-  buildHeader('404 page not found') +
+  buildHTMLHead(pageURL) +
+  buildHeader() +
   '<div style="font-size:40px; text-align:center; margin-top:50px;">' +
   'Sorry this page does not exist</div>' +
   buildFooter();
 
   return html;
 };
-var buildPageFredrik = function() {
+var buildPageFredrik = function(pageURL) {
   var html = '' +
-  buildHeader('404 page not found') +
+  buildHTMLHead('Fredrik\'s own page') +
   '<div style="font-size:40px; text-align:center; margin-top:50px;">' +
   'Wowaweewa!  You got it working!</div>' +
   buildFooter();
 
   return html;
 };
+var buildPageDenise = function(pageURL) {
+  var html = '' +
+  buildHTMLHead('Denise\'s own page') +
+  '<div style="font-size:40px; text-align:center; margin-top:50px;">' +
+  'Of course my goober gets her own page!</div>' +
+  buildFooter();
 
-//-------------------------------
-//----Exports Section------------
-//-------------------------------
+  return html;
+};
 
-exports.createPage = function(key) {
-  var pageFns = {
-    index: buildPageIndex,
+//--------------------------------------
+//--------------------------------------
+//----Exports Section-------------------
+//--------------------------------------
+//--------------------------------------
+
+var pageFns = {
+    home: buildPageIndex,
     about: buildPageAbout,
     artists: buildPageArtists,
     privacypolicy: buildPagePrivacyPolicy,
     register: buildPageRegister,
     schedule: buildPageSchedule,
     venuetravel: buildPageVenueTravel,
-    fredrik: buildPageFredrik
+    fredrik: buildPageFredrik,
+    denise: buildPageDenise
   };
+
+exports.createPage = function(key) {
 
   if (pageFns[key] === undefined) {
     return buildPage404();
   }
 
-  return pageFns[key]();
+  return pageFns[key](key);
 };
 
 
