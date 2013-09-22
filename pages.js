@@ -6,12 +6,7 @@
 //--------------------------------------
 //--------------------------------------
 var fs = require('fs');
-
-
-fs.readdir('./public/img/carousel', function(err, files) {
-  return files;
-});
-
+var articles = require('./public/js/articles.js');
 
 var getArtistsObj = function() {
   // realistically this would be replaced with a http
@@ -64,7 +59,7 @@ var buildCarousel = function(path) {
 
   //build the skeleton of the carousel
   html += '' +
-  '<div id="rouxCarousel" class="carousel slide hidden-sm">\n' +
+  '<div id="rouxCarousel" class="carousel slide hidden-sm hidden-xs">\n' +
   '  <ol class="carousel-indicators">\n' +
   '    <li data-target="#rouxCarousel" data-slide-to="0" class="active"></li>\n';
 
@@ -181,17 +176,14 @@ var buildBodyIndex = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-6">\n' +
-  '      <h2>Main Content</h2>\n' +
-  '      <p>' + loremText +
-  '      </p>\n' +
+        articles.main() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-2 col-md-6">\n' +
-  '      <h2>Sidebar</h2>\n' +
-  '      <p>' + loremText +
-  '      </p>\n' +
+        articles.aboutTheArtists() +
   '    </section><!-- sidebar -->\n' +
   '  </div><!-- content -->\n' +
-  '</section><!-- container -->\n';
+  '</section><!-- container -->\n' +
+  '<h2></h2>'; //for margin spacing
 
   return html;
 

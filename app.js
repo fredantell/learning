@@ -1,7 +1,7 @@
 var express = require('express');
-var pages = require('./pages.js');
 var app = express();
 
+var pages = require('./pages.js');
 
 app.use(express.logger());
 app.use(express.static(__dirname + '/public'));

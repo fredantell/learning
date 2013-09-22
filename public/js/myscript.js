@@ -16,4 +16,6 @@ $(document).ready(function() {
   var linkWithBodyId = $('ul.nav a[href="' + bodyId + '"]');
   linkWithBodyId.parent().addClass('active');
 
+  $("[data-toggle='tooltip']").tooltip({animation: true});
+
 });/* document ready*/
