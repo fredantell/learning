@@ -7,6 +7,7 @@
 //--------------------------------------
 var fs = require('fs');
 var articles = require('./public/js/articles.js');
+var asides = require('./public/js/asides.js');
 
 var getArtistsObj = function() {
   // realistically this would be replaced with a http
@@ -175,11 +176,14 @@ var buildBodyIndex = function() {
 
   '<section class="container">\n' +
   '  <div class="content row">\n' +
-  '    <section class="main col col-lg-8">\n' +
+  '    <section class="main col col-lg-8 col-md-8">\n' +
         articles.main() +
         articles.aboutTheArtists() +
         articles.aboutTheVenue() +
   '    </section><!-- main -->\n' +
+  '    <section class="sidebar col col-lg-4 col-md-4">' +
+        asides.register() +
+  '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
   '<h2></h2>'; //for margin spacing

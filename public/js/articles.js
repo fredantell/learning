@@ -10,7 +10,7 @@ var buildPhotoGridArtist = function() {
       '<img data-toggle="tooltip" data-original-title="' + artistObj.name +
       '" src="img/artists/' + artistObj.shortname + '_tn.jpg"' +
       ' alt="Photo of ' + artistObj.name + '"></a>';
-      //example: <a href="artists.php#Barot_Bellingham"><img data-toggle="tooltip" data-original-title="Barot Bellingham" src="images/artists/Barot_Bellingham_tn.jpg" alt="Photo of Barot Bellingham"></a>
+      //example: <a href="artists#Barot_Bellingham"><img data-toggle="tooltip" data-original-title="Barot Bellingham" src="images/artists/Barot_Bellingham_tn.jpg" alt="Photo of Barot Bellingham"></a>
   });
   return html;
   
