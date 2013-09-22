@@ -175,12 +175,11 @@ var buildBodyIndex = function() {
 
   '<section class="container">\n' +
   '  <div class="content row">\n' +
-  '    <section class="main col col-lg-8 col-md-6">\n' +
+  '    <section class="main col col-lg-8">\n' +
         articles.main() +
-  '    </section><!-- main -->\n' +
-  '    <section class="sidebar col col-lg-2 col-md-6">\n' +
         articles.aboutTheArtists() +
-  '    </section><!-- sidebar -->\n' +
+        articles.aboutTheVenue() +
+  '    </section><!-- main -->\n' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
   '<h2></h2>'; //for margin spacing
