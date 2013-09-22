@@ -64,7 +64,7 @@ var buildCarousel = function(path) {
 
   //build the skeleton of the carousel
   html += '' +
-  '<div id="rouxCarousel" class="carousel slide">\n' +
+  '<div id="rouxCarousel" class="carousel slide hidden-sm">\n' +
   '  <ol class="carousel-indicators">\n' +
   '    <li data-target="#rouxCarousel" data-slide-to="0" class="active"></li>\n';
 
