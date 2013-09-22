@@ -1,16 +1,24 @@
+'use strict';
 //--------------------------------------
 //--------------------------------------
 //----Aux functions for use in----------
 //-----builder functions below----------
 //--------------------------------------
 //--------------------------------------
+var fs = require('fs');
+
+
+fs.readdir('./public/img/carousel', function(err, files) {
+  return files;
+});
+
 
 var getArtistsObj = function() {
   // realistically this would be replaced with a http
   // request instead of reading the file directly
   // since in a production environment the server would
   // be generating the JSON and it wouldn't be a static file
-  // sitting there waiting to be included with require()
+  // sitting there waiting to be included via a require()
   var artists = require('./public/mock_api/artists.json');
   artists = artists.artists;
   return artists;
@@ -32,6 +40,62 @@ var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
 //----Builders for page sections--------
 //--------------------------------------
 //--------------------------------------
+
+var buildCarousel = function(path) {
+
+  var html = '';
+  var files = fs.readdirSync(path);
+
+  //path must have trailing slash or else it will break img source
+  if (path[path.length - 1] !== '/') {
+    path += '/';
+  }
+
+  //path for fs and path for static files are different.
+  //Must rip ./public off of path.  Probably a better way to do this
+  //using an actual path variable from express
+  path = path.slice(path.indexOf('img'), path.length);
+
+  //check to make sure files is not empty
+  if (files === undefined) {
+      console.log('Searched for files but none present');
+      return false;
+  }
+
+  //build the skeleton of the carousel
+  html += '' +
+  '<div id="rouxCarousel" class="carousel slide">\n' +
+  '  <ol class="carousel-indicators">\n' +
+  '    <li data-target="#rouxCarousel" data-slide-to="0" class="active"></li>\n';
+
+  for (var j = 1; j < files.length; j++) {
+    html += '' +
+    '<li data-target="#rouxCarousel" data-slide-to="' + j + '"></li>\n';
+  }
+
+  html += '' +
+  '</ol><!-- carousel-indicators -->' +
+
+  '<section class="carousel-inner">\n' +
+  '<div class="active item"><img src="' + path + files[0] + '"></div>\n';
+
+  //build the other carousel items file by file
+  for (var i = 1; i < files.length; i++) {
+    html += '<div class="item"><img src="' + path + files[i] + '"></div>\n';
+  }
+
+  //close the skeleton and complete the carousel markup
+  html += '' +
+  '</section><!--carousel-inner-->\n' +
+  '<a href="#rouxCarousel" class="left carousel-control" data-slide="prev">\n' +
+  '  <span class="glyphicon glyphicon-chevron-left"></span></a>\n' +
+  '<a href="#rouxCarousel" class="right carousel-control" data-slide="next">\n' +
+  '  <span class="glyphicon glyphicon-chevron-right"></span></a>\n' +
+  '</div><!--rouxCarousel-->\n';
+
+  return html;
+
+};
 
 var buildHTMLHead = function(pageTitle) {
   pageTitle = pageTitle || '';
@@ -106,20 +170,28 @@ var buildFooter = function() {
 
 var buildBodyIndex = function() {
   var html = '' +
-  '<section class="container">' +
-  '  <div class="content row">' +
-  '    <section class="main col col-lg-8 col-md-6">' +
-  '      <h2>Main Content</h2>' +
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-12">\n' +
+         buildCarousel('./public/img/carousel') +
+  '    </section><!-- main -->\n' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-8 col-md-6">\n' +
+  '      <h2>Main Content</h2>\n' +
   '      <p>' + loremText +
-  '      </p>' +
-  '    </section><!-- main -->' +
-  '    <section class="sidebar col col-lg-2 col-md-6">' +
-  '      <h2>Sidebar</h2>' +
+  '      </p>\n' +
+  '    </section><!-- main -->\n' +
+  '    <section class="sidebar col col-lg-2 col-md-6">\n' +
+  '      <h2>Sidebar</h2>\n' +
   '      <p>' + loremText +
-  '      </p>' +
-  '    </section><!-- sidebar -->' +
-  '  </div><!-- content -->' +
-  '</section><!-- container -->';
+  '      </p>\n' +
+  '    </section><!-- sidebar -->\n' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n';
 
   return html;
 
