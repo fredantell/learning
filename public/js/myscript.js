@@ -16,6 +16,47 @@ $(document).ready(function() {
   var linkWithBodyId = $('ul.nav a[href="' + bodyId + '"]');
   linkWithBodyId.parent().addClass('active');
 
+  //show tooltips
   $("[data-toggle='tooltip']").tooltip({animation: true});
+
+  //show modals
+  $('.modalphotos img').on('click', function(e) {
+    var smImageSrc = e.target.src.toString();
+    smImageSrc = smImageSrc.slice(smImageSrc.indexOf('img'),smImageSrc.length);
+    var lgImageSrc = smImageSrc.slice(0, smImageSrc.length-7) + '.jpg';
+
+    if(! document.querySelector('.modal-body')) {
+      var modalHTML = '' +
+      '<div class="modal-body">' +
+      '  <img id="modalimage" src="' + lgImageSrc +
+      '" alt="' + e.target.alt + '">' +
+      '</div><!--modal-body-->';
+
+      var modalEl = document.createElement('section');
+      modalEl.id = "modal";
+      $(modalEl).
+        addClass(' modal fade').
+        html(modalHTML);
+
+      $('body').prepend(modalEl);
+    } else {
+      $('#modalimage').
+        attr('src', lgImageSrc).
+        attr('alt', e.target.alt);
+    }
+    
+    $('#modal').modal({
+      show: true
+    });
+
+    $('#modal').on('click', function(e) {
+      $('#modal').modal('hide');
+      // window.setTimeout(function() {
+      //   $('#modal').remove();
+      // }, 400);
+
+    });
+
+  });
 
 });/* document ready*/

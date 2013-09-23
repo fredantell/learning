@@ -183,6 +183,7 @@ var buildBodyIndex = function() {
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
         asides.register() +
+        asides.photosLastYear() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
