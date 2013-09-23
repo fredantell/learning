@@ -110,6 +110,11 @@ var buildHTMLHead = function(pageTitle) {
 };
 var buildHeader = function() {
   var html = '' +
+  '<section id="modal" class="modal fade">' +
+  '  <div class="modal-body">' +
+  '    <img id="modalimage" src="" alt="" style="max-width:100%">' +
+  '  </div><!--modal-body-->' +
+  '</section>' +
   '<div class="content row">' +
   '  <div class="col-lg-12">' +
   '    <header class="clearfix">' +
