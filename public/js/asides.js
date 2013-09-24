@@ -1,3 +1,5 @@
+var helper = require('./helper.js');
+
 var capitalize = function(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
@@ -88,7 +90,17 @@ exports.schedule = function() {
   '</aside>';
 
    return html;
-
-
 };
 
+exports.aboutTheArtists = function() {
+  var articles = require('./articles.js');
+
+  var html = '' +
+  '<aside class="asideAboutTheArtists"><h2>About the artists</h2>' +
+  '  <p>Each Featured Artist has an opportunity to speak at the conference to share his or her vision, perspective, and techniques with conference attendees. To get more information about the artists click on one of their photos, or visit our <a href="artists.php">artists</a> page.</p>' +
+  helper.buildPhotoGrid() +
+  '<a href="artists" class="btn btn-primary">about the artists</a>' +
+  '</aside><!-- asideAboutTheArtists -->';
+
+  return html;
+};

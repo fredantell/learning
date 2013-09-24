@@ -217,6 +217,7 @@ var buildBodyVenues = function() {
   '    <section class="sidebar col col-lg-4 col-md-4">' +
         asides.register() +
         asides.photosLastYear() +
+        asides.aboutTheArtists() +
         asides.schedule() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +

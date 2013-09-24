@@ -1,30 +1,4 @@
-var buildPhotoGridArtist = function() {
-  var html = '';
-
-  var artists = require('../mock_api/artists.json');
-  artists = artists.artists;
-
-  artists.forEach(function(artistObj) {
-    html += '\n' +
-      '<a href="artists#' + artistObj.shortname + '">' +
-      '<img data-toggle="tooltip" data-original-title="' + artistObj.name +
-      '" src="img/artists/' + artistObj.shortname + '_tn.jpg"' +
-      ' alt="Photo of ' + artistObj.name + '"></a>';
-      //example: <a href="artists#Barot_Bellingham"><img data-toggle="tooltip" data-original-title="Barot Bellingham" src="images/artists/Barot_Bellingham_tn.jpg" alt="Photo of Barot Bellingham"></a>
-  });
-  return html;
-
-};
-
-var buildPhotoGrid = function() {
-  var html = '' +
-  '<div class="component photogrid clearfix">' +
-  buildPhotoGridArtist() +
-  '</div><!--photogrid-->';
-
-  return html;
-};
-
+var helper = require('./helper.js');
 
 exports.main = function() {
   var html = '' +
@@ -42,7 +16,7 @@ exports.aboutTheArtists = function() {
  '   <p>The Roux Academy gets thousands of submissions every year for artists interesting in participating in the CAC exhibits, and selects approximately 200 distinct pieces of contemporary art for display in their collective exhibit.</p>' +
  '   <p class="hidden-sm hidden-xs">In addition, 12 individuals are honored as Featured Artists - each being granted his or her own exhibit hall to display entire collections or themed pieces. Each Featured Artist has an opportunity to speak at the conference to share his or her vision, perspective, and techniques with conference attendees. It is truly an honor to be a CAC Featured Artist and many past students artists who were featured at CAC have gone on to brilliant careers in art.' +
  '   </p>' +
-      buildPhotoGrid() +
+      helper.buildPhotoGrid() +
  '   <a href="artists" class="btn btn-primary">about the artists</a>' +
  '</article><!--aboutTheArtists-->';
 
@@ -72,26 +46,30 @@ exports.allVenues = function() {
 
   var html = '' +
   '<article class="aboutthevenues">' +
-  ' <h2>About the venue</h2>' +
+  '  <section class="primaryHotel">' +
+  '  <h2>About the venue</h2>' +
   ' <article class="media">' +
   '   <img class="pull-left" src="' + hotelImgPath + hotels.primary.image + '" alt="' + hotels.primary.alt + '">' +
   '   <div class="media-body">' +
         hotels.primary.description +
   '   </div>' +
-  ' </article>';
+  ' </article><!--media -->' +
+  ' </section><!--primaryHotel-->' +
+  
+  '<section class="otherHotels">' +
+  ' <h2>Other hotels</h2>';
 
   for (var i = 0; i < hotels.other.length; i++) {
     html += '' +
-    ' <h2>Other hotels</h2>' +
-
     ' <article class="media">' +
     '     <h3>' + hotels.other[i].hotel + '</h3>' +
     '     <img class="pull-right img-rounded" src="' + hotelImgPath + hotels.other[i].image + '" alt="' + hotels.other[i].alt + '">' +
     '     <p class="media-body">' + hotels.other[i].description + '</p>' +
-    ' </article>' +
-    '</article>';
-
+    ' </article>';
   }
+
+  html += '</section><!-- otherHotels -->' +
+  '</article><!--aboutthevenues-->';
 
 return html;
 
