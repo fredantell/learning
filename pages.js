@@ -84,9 +84,9 @@ var buildCarousel = function(path) {
   html += '' +
   '</section><!--carousel-inner-->\n' +
   '<a href="#rouxCarousel" class="left carousel-control" data-slide="prev">\n' +
-  '  <span class="glyphicon glyphicon-chevron-left"></span></a>\n' +
+  '  <i class="icon-prev icon-chevron-left"></i></a>\n' +
   '<a href="#rouxCarousel" class="right carousel-control" data-slide="next">\n' +
-  '  <span class="glyphicon glyphicon-chevron-right"></span></a>\n' +
+  '  <i class="icon-next icon-chevron-right"></i></a>\n' +
   '</div><!--rouxCarousel-->\n';
 
   return html;
@@ -103,6 +103,7 @@ var buildHTMLHead = function(pageTitle) {
   '<title>Roux - ' + pageTitle + '</title>' +
   "<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>" +
   "<link href='./lib/bootstrap/css/bootstrap.css' rel='stylesheet'>" +
+  '<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">' +
   '</head>' +
   '<body id="' + pageTitle + '">';
 
@@ -189,6 +190,7 @@ var buildBodyIndex = function() {
   '    <section class="sidebar col col-lg-4 col-md-4">' +
         asides.register() +
         asides.photosLastYear() +
+        asides.schedule() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +

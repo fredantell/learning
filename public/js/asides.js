@@ -1,4 +1,51 @@
+var capitalize = function(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
 
+var buildSchedulePanels = function() {
+  var schedData = require('../mock_api/schedule.json');
+  schedData = schedData.schedule;
+
+  var html = '';
+
+  for (var i = 0; i < schedData.length; i++) {
+
+    var day = capitalize(schedData[i].day);
+    var description = schedData[i].desc;
+
+    html += '' +
+      '<!-- ' + day + '******************-->' +
+      '<div class="panel panel-default">' +
+
+      '  <div class="panel-heading">' +
+      '    <h4 class="panel-title">' +
+      '    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapse' + day + '">' +
+      '      <i class="icon-calendar"></i> ' + day +
+      '    </a>' +
+      '    </h4>' +
+      '  </div>' +
+
+      '  <div id="collapse' + day + '" class="panel-collapse collapse">' +
+      '    <div class="panel-body">' +
+      '      <p>' + description + '</p>' +
+      '      <p><a href="schedule#' + day + '" class="btn btn-danger btn-sm">' + capitalize(day) + '\'s Schedule</a>' +
+      '    </div>' +
+      '  </div>' +
+
+      '</div><!-- ' + day + 'panel + -->';
+  }
+
+  return html;
+};
+
+
+
+
+/**************************/
+/**************************/
+/*****Exports Section******/
+/**************************/
+/**************************/
 
 exports.register = function() {
   var html = '' +
@@ -26,7 +73,22 @@ exports.photosLastYear = function() {
   '    <img src="img/slides/glassworking_workshop_tn.jpg" alt="Glassmaking workshop">' +
   '  </div>' +
   '</aside>';
-  
+
   return html;
+};
+
+exports.schedule = function() {
+  var html = '' +
+  '<aside class="schedule">' +
+  '  <h2>Schedule</h2>' +
+  '  <p>There\'s a lot happening at our many workshops and talks. Make sure you check out the <a href="schedule">full schedule</a> for more information</p>' +
+  '  <div class="panel-group" id="schedule">' +
+  buildSchedulePanels() +
+  '</div><!--panel-group-->' +
+  '</aside>';
+
+   return html;
+
+
 };
 

@@ -3,7 +3,7 @@ $(document).ready(function() {
   function toggleDropDown() {
     $(this).find('ul.dropdown-menu').slideToggle(100);
   }
-  
+
   //automatically expand dropdown menu without requiring a click
   $('ul.nav li.dropdown').hover(toggleDropDown, toggleDropDown);
 
@@ -22,8 +22,8 @@ $(document).ready(function() {
   //show modals
   $('.modalphotos img').on('click', function(e) {
     var smImageSrc = e.target.src.toString();
-    smImageSrc = smImageSrc.slice(smImageSrc.indexOf('img'),smImageSrc.length);
-    var lgImageSrc = smImageSrc.slice(0, smImageSrc.length-7) + '.jpg';
+    smImageSrc = smImageSrc.slice(smImageSrc.indexOf('img'), smImageSrc.length);
+    var lgImageSrc = smImageSrc.slice(0, smImageSrc.length - 7) + '.jpg';
 
     $('#modalimage').
       attr('src', lgImageSrc).
@@ -41,3 +41,5 @@ $(document).ready(function() {
   });
 
 });/* document ready*/
+
+

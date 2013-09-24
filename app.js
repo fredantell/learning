@@ -22,15 +22,3 @@ app.listen(port, function() {
   console.log('Listening on ' + port);
 });
 
-
-
-
-
-
-// app.get('/test.json', function(req, res) {
-//   var obj = {
-//     name: "fredrik",
-//     goob: true
-//   };
-//   res.send(JSON.stringify(obj));
-// });
