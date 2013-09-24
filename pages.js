@@ -200,6 +200,34 @@ var buildBodyIndex = function() {
 
 };
 
+var buildBodyVenues = function() {
+  var html = '' +
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-12">\n' +
+  '    </section><!-- main -->\n' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-8 col-md-8">\n' +
+        articles.allVenues() +        
+  '    </section><!-- main -->\n' +
+  '    <section class="sidebar col col-lg-4 col-md-4">' +
+        asides.register() +
+        asides.photosLastYear() +
+        asides.schedule() +
+  '    </section><!--sidebar-->' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+  '<h2></h2>'; //for margin spacing
+
+  return html;
+
+};
+
+
 //--------------------------------------
 //--------------------------------------
 //---Potential Data for JSON------------
@@ -279,7 +307,7 @@ var buildPageVenueTravel = function(pageURL) {
   var html = '' +
   buildHTMLHead(pageURL) +
   buildHeader() +
-  buildBodyIndex() +
+  buildBodyVenues() +
   buildFooter();
 
   return html;
