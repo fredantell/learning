@@ -1,4 +1,5 @@
 'use strict';
+
 //--------------------------------------
 //--------------------------------------
 //----Aux functions for use in----------
@@ -8,17 +9,8 @@
 var fs = require('fs');
 var articles = require('./public/js/articles.js');
 var asides = require('./public/js/asides.js');
+var helper = require('./public/js/helper.js');
 
-var getArtistsObj = function() {
-  // realistically this would be replaced with a http
-  // request instead of reading the file directly
-  // since in a production environment the server would
-  // be generating the JSON and it wouldn't be a static file
-  // sitting there waiting to be included via a require()
-  var artists = require('./public/mock_api/artists.json');
-  artists = artists.artists;
-  return artists;
-};
 
 var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
   var html = '';
@@ -134,7 +126,7 @@ var buildHeader = function() {
   '            <ul class="dropdown-menu">' +
   '              <li><a href="artists">All artists</a></li>' +
   '              <li class="divider"></li>' +
-                 listOfIndividualArtistLIs(getArtistsObj()) +
+                 listOfIndividualArtistLIs(helper.getArtistsObj()) +
   '            </ul><!-- dropdown menu -->' +
   '          </li><!-- dropdown class -->' +
   '          <li><a href="register">Register</a></li>' +
@@ -228,6 +220,33 @@ var buildBodyVenues = function() {
 
 };
 
+var buildBodySchedule = function() {
+  var html = '' +
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-12">\n' +
+  '    </section><!-- main -->\n' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-8 col-md-8">\n' +
+        articles.schedule() +        
+  '    </section><!-- main -->\n' +
+  '    <section class="sidebar col col-lg-4 col-md-4">' +
+        asides.register() +
+        asides.photosLastYear() +
+        asides.aboutTheArtists() +        
+  '    </section><!--sidebar-->' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+  '<h2></h2>'; //for margin spacing
+
+  return html;
+
+};
+
 
 //--------------------------------------
 //--------------------------------------
@@ -298,7 +317,7 @@ var buildPageSchedule = function(pageURL) {
   var html = '' +
   buildHTMLHead(pageURL) +
   buildHeader() +
-  buildBodyIndex() +
+  buildBodySchedule() +
   buildFooter();
 
   return html;

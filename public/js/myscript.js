@@ -35,10 +35,15 @@ $(document).ready(function() {
 
     $('#modal').on('click', function(e) {
       $('#modal').modal('hide');
-
     });
 
   });
+
+  var path = window.location.pathname;
+  var schedHash = window.location.hash || '#Monday';
+  if (path === '/schedule' && schedHash) {
+    $('ul.nav a[href="' + schedHash + '"]').tab('show');
+  }
 
 });/* document ready*/
 
