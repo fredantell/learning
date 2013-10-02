@@ -100,49 +100,55 @@ var buildHTMLHead = function(pageTitle) {
   '</head>' +
   '<body id="' + pageTitle + '">';
 
+
   return html;
 };
 var buildHeader = function() {
   var html = '' +
-  '<section id="modal" class="modal fade">' +
-  '  <div class="modal-body">' +
-  '    <img id="modalimage" src="" alt="" style="max-width:100%">' +
-  '  </div><!--modal-body-->' +
-  '</section>' +
-  '<div class="content row">' +
-  '  <div class="col-lg-12">' +
-  '    <header class="clearfix">' +
+  '<section class="container">' +
+    '<div class="container">' +
 
-  '      <section id="branding">' +
-  '        <a href="home"><img src="img/misc/ralogo_monogram.png" alt="Logo for Roux Conference"></a>' +
-  '      </section><!-- branding -->' +
+      '<section id="modal" class="modal fade">' +
+      '  <div class="modal-body">' +
+      '    <img id="modalimage" src="" alt="" style="max-width:100%">' +
+      '  </div><!--modal-body-->' +
+      '</section>' +
 
-  '      <section class="navbar navbar-default">' +
-  '        <ul class="nav navbar-nav">' +
-  '          <li><a href="home">Home</a></li>' +
-  '          <li><a href="venuetravel">Venue/Travel</a></li>' +
-  '          <li><a href="schedule">Schedule</a></li>' +
-  '          <li class="dropdown">' +
-  '            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All artists<span class="caret"></span></a>' +
-  '            <ul class="dropdown-menu">' +
-  '              <li><a href="artists">All artists</a></li>' +
-  '              <li class="divider"></li>' +
-                 listOfIndividualArtistLIs(helper.getArtistsObj()) +
-  '            </ul><!-- dropdown menu -->' +
-  '          </li><!-- dropdown class -->' +
-  '          <li><a href="register">Register</a></li>' +
-  '        </ul><!-- nav -->' +
-  '      </section><!-- navbar -->' +
+      '<div class="content row">' +
+      '  <div class="col-lg-12">' +
+      '    <header class="clearfix">' +
 
-  '    </header><!-- clearfix header -->' +
-  '  </div><!-- column -->' +
-  '</div><!-- content -->';
+      '      <section id="branding">' +
+      '        <a href="home"><img src="img/misc/ralogo_monogram.png" alt="Logo for Roux Conference"></a>' +
+      '      </section><!-- branding -->' +
+
+      '      <section class="navbar navbar-default">' +
+      '        <ul class="nav navbar-nav">' +
+      '          <li><a href="home">Home</a></li>' +
+      '          <li><a href="venuetravel">Venue/Travel</a></li>' +
+      '          <li><a href="schedule">Schedule</a></li>' +
+      '          <li class="dropdown">' +
+      '            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All artists<span class="caret"></span></a>' +
+      '            <ul class="dropdown-menu">' +
+      '              <li><a href="artists">All artists</a></li>' +
+      '              <li class="divider"></li>' +
+                     listOfIndividualArtistLIs(helper.getArtistsObj()) +
+      '            </ul><!-- dropdown menu -->' +
+      '          </li><!-- dropdown class -->' +
+      '          <li><a href="register">Register</a></li>' +
+      '        </ul><!-- nav -->' +
+      '      </section><!-- navbar -->' +
+
+      '    </header><!-- clearfix header -->' +
+      '  </div><!-- column -->' +
+      '</div><!-- content -->';
 
   return html;
 };
 
 var buildFooter = function() {
   var html = '' +
+  '</div><!-- end div.content row -->' + //close div from HTMLhead'
   // '<section class="container">' +
   '  <footer class="content row">' +
   '    <nav class="col-lg-12">' +
@@ -157,6 +163,7 @@ var buildFooter = function() {
   '<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>' +
   '<script src="lib/bootstrap/js/bootstrap.js"></script>' +
   '<script src="/js/myscript.js"></script>' +
+  '</section><!-- end section.container after <body> tag -->' +
   '</body>' +
   '</html>';
 
@@ -275,6 +282,32 @@ var buildBodyArtists = function() {
 
 };
 
+var buildBodyRegister = function() {
+  var html = '' +
+    '<section class="container">\n' +
+    '  <div class="content row">\n' +
+    '    <section class="main col col-lg-12">\n' +
+    '    </section><!-- main -->\n' +
+    '  </div><!-- content -->\n' +
+    '</section><!-- container -->\n' +
+
+    '<section class="container">\n' +
+    '  <div class="content row">\n' +
+    '    <section class="main col col-lg-8 col-md-8">\n' +
+    articles.register() +
+    '    </section><!-- main -->\n' +
+    '    <section class="sidebar col col-lg-4 col-md-4">' +
+    asides.photosLastYear() +
+    asides.schedule() +
+    '    </section><!--sidebar-->' +
+    '  </div><!-- content -->\n' +
+    '</section><!-- container -->\n' +
+    '<h2></h2>'; //for margin spacing
+
+  return html;
+
+};
+
 
 //--------------------------------------
 //--------------------------------------
@@ -336,7 +369,7 @@ var buildPageRegister = function(pageURL) {
   var html = '' +
   buildHTMLHead(pageURL) +
   buildHeader() +
-  buildBodyIndex() +
+  buildBodyRegister() +
   buildFooter();
 
   return html;
