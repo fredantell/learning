@@ -27,7 +27,11 @@ $(document).ready(function() {
 
     $('#modalimage').
       attr('src', lgImageSrc).
-      attr('alt', e.target.alt);
+      attr('alt', e.target.alt).
+      css('max-width', '100%').
+      css('max-height', '100%').
+      css('display', 'block').
+      css('margin', '0 auto');
 
     $('#modal').modal({
       show: true

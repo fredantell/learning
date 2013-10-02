@@ -16,8 +16,8 @@ var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
   var html = '';
   arrayOfArtistObjs.forEach(function(artistObj) {
     html += '\n' +
-    '<li><a href="artists/' + artistObj.shortname +
-    '">' + artistObj.name + '</a></li>';
+        '<li><a href="artists/' + artistObj.shortname +
+        '">' + artistObj.name + '</a></li>';
   });
 
   return html;
@@ -46,19 +46,19 @@ var buildCarousel = function(path) {
 
   //check to make sure files is not empty
   if (files === undefined) {
-      console.log('Searched for files but none present');
-      return false;
+    console.log('Searched for files but none present');
+    return false;
   }
 
   //build the skeleton of the carousel
   html += '' +
-  '<div id="rouxCarousel" class="carousel slide hidden-sm hidden-xs">\n' +
-  '  <ol class="carousel-indicators">\n' +
-  '    <li data-target="#rouxCarousel" data-slide-to="0" class="active"></li>\n';
+      '<div id="rouxCarousel" class="carousel slide hidden-sm hidden-xs">\n' +
+      '  <ol class="carousel-indicators">\n' +
+      '    <li data-target="#rouxCarousel" data-slide-to="0" class="active"></li>\n';
 
   for (var j = 1; j < files.length; j++) {
     html += '' +
-    '<li data-target="#rouxCarousel" data-slide-to="' + j + '"></li>\n';
+        '<li data-target="#rouxCarousel" data-slide-to="' + j + '"></li>\n';
   }
 
   html += '' +
@@ -96,6 +96,7 @@ var buildHTMLHead = function(pageTitle) {
   "<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>" +
   "<link href='./lib/bootstrap/css/bootstrap.css' rel='stylesheet'>" +
   '<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">' +
+  '<link href="./css/styles.css" rel="stylesheet">' +
   '</head>' +
   '<body id="' + pageTitle + '">';
 
@@ -232,12 +233,39 @@ var buildBodySchedule = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-8">\n' +
-        articles.schedule() +        
+        articles.schedule() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
         asides.register() +
         asides.photosLastYear() +
-        asides.aboutTheArtists() +        
+        asides.aboutTheArtists() +
+  '    </section><!--sidebar-->' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+  '<h2></h2>'; //for margin spacing
+
+  return html;
+
+};
+
+var buildBodyArtists = function() {
+  var html = '' +
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-12">\n' +
+  '    </section><!-- main -->\n' +
+  '  </div><!-- content -->\n' +
+  '</section><!-- container -->\n' +
+
+  '<section class="container">\n' +
+  '  <div class="content row">\n' +
+  '    <section class="main col col-lg-8 col-md-8">\n' +
+        articles.allArtists() +
+  '    </section><!-- main -->\n' +
+  '    <section class="sidebar col col-lg-4 col-md-4">' +
+        asides.register() +
+        asides.photosLastYear() +
+        asides.schedule() +        
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
@@ -287,8 +315,9 @@ var buildPageArtists = function(pageURL) {
   var html = '' +
   buildHTMLHead(pageURL) +
   buildHeader() +
-  buildBodyIndex() +
-  buildFooter();
+  buildBodyArtists() +
+  buildFooter() +
+   "<script>$('body').attr('data-spy', 'scroll').attr('data-target', '#artistNavList')</script>";
 
   return html;
 };

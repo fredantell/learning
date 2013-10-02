@@ -1,4 +1,9 @@
-{ "artists" : [
+{ "artistOverview" : {
+    "header": "About the artists",
+    "content": "<p>The Roux Academy gets thousands of submissions every year for artists interesting in participating in the CAC exhibits, and selects approximately 200 distinct pieces of contemporary art for display in their collective exhibit. In addition, 12 individuals are honored as Featured Artists - each being granted his or her own exhibit hall to display entire collections or themed pieces. Each Featured Artist has an opportunity to speak at the conference to share his or her vision, perspective, and techniques with conference attendees. It is truly an honor to be a CAC Featured Artist and many past students artists who were featured at CAC have gone on to brilliant careers in art.</p>"
+  },
+
+  "artists" : [
   {
     "name":"Barot Bellingham",
     "shortname":"Barot_Bellingham",
@@ -39,7 +44,8 @@
     "name":"Constance Olivia Smith",
     "shortname":"Constance_Smith",
     "reknown":"Fullerton-Brighton-Norwell Award",
-    "bio":"Constance received the Fullerton-Brighton-Norwell Award for Modern Art for her mixed-media image of a tree of life, with jewel-adorned branches depicting the arms of humanity, and precious gemstone-decorated leaves representing the spouting buds of togetherness. The daughter of a New York jeweler, Constance has been salvaging the discarded remnants of her father's jewelry-making since she was five years old, and won the New York State Fair grand prize at the age of 8 years old for a gem-adorned painting of the Manhattan Bridge."
+    "bio":"Constance received the Fullerton-Brighton-Norwell Award for Modern Art for her mixed-media image of a tree of life, with jewel-adorned branches depicting the arms of humanity, and precious gemstone-decorated leaves representing the spouting buds of togetherness. The daughter of a New York jeweler, Constance has been salvaging the discarded remnants of her father's jewelry-making since she was five years old, and won the New York State Fair grand prize at the age of 8 years old for a gem-adorned painting of the Manhattan Bridge.",
+    "bio2": "Constance has been commissioned to \"paint\" the altar of a historic church in Wicklow, Ireland with gemstones that belonged to several prominent Irish families. She will depart for Ireland shortly after the CAC and plans to complete the work over a course of 4 to 6 months. Join Constance on Thursday for her session on \" The Art of Salvaging\" where she'll give insight into collecting and finding salvageable \"junk\" and turning it into beautiful art."
   },
   {
     "name":"Riley Rudolph Rewington",
@@ -52,6 +58,7 @@
     "shortname":"Xhou_Ta",
     "reknown":"China International Art University",
     "bio":"A senior at the China International Art University, Xhou has become well-known for his miniature sculptures, often the size of a rice granule, that are displayed by rear projection of microscope images on canvas. Xhou will discuss the art and science behind his incredibly detailed works of art."
+
   },
   {
     "name":"Lorenzo Garcia",
