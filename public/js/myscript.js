@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // dropdown menu for main site navigation
   function toggleDropDown() {
     $(this).find('ul.dropdown-menu').slideToggle(100);
   }
