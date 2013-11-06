@@ -94,7 +94,7 @@ var buildHTMLHead = function(pageTitle) {
   '<meta charset="UTF-8" />' +
   '<title>Roux - ' + pageTitle + '</title>' +
   "<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>" +
-  "<link href='./lib/bootstrap/css/bootstrap.css' rel='stylesheet'>" +
+  "<link href='./css/bootstrap.css' rel='stylesheet'>" +
   '<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">' +
   '<link href="./css/styles.css" rel="stylesheet">' +
   '</head>' +
