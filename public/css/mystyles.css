@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bree Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #475c98;
+}
+body {
+  background: #475c98 url('/img/misc/background_buildings.png');
+  margin-top: 30px;
+}
+p {
+  font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  color: #586e75;
+  padding: 0 2%;
+}
+.container {
+  background: #fdf5e3;
+  -webkit-border-radius: 60px 0 0 0;
+  -moz-border-radius: 60px 0 0 0;
+  border-radius: 60px 0 0 0;
+}
+@media (max-width: 767px) {
+  .container {
+    -webkit-border-radius: 20px 0 0 0;
+    -moz-border-radius: 20px 0 0 0;
+    border-radius: 20px 0 0 0;
+  }
+}
+.main {
+  background: #fdf5e3;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.carousel {
+  margin-bottom: 0;
+}
+.main > article {
+  margin: 0 5%;
+}
+.sidebar > aside {
+  padding-right: 5%;
+}
+@media (max-width: 767px) {
+  .sidebar > aside {
+    padding-left: 5%;
+  }
+}
+aside h2 {
+  font-size: 1.8em;
+  color: #d33682;
+  border-bottom: 1px dotted #475c98;
+}
+.navbar {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+#branding img {
+  margin: 10px 0 5px 25px;
+  max-width: 450px;
+}
+@media (max-width: 767px) {
+  #branding img {
+    margin: 10px 0 5px 10px;
+    width: 90%;
+  }
+}
+.panel-default > .panel-heading {
+  background: #475c98;
+}
+.panel-default > .panel-heading a {
+  color: white;
+}
+.aboutthevenues article {
+  margin: 0;
+  padding: 0;
+}
+.aboutthevenues h2 {
+  padding: 0;
+  padding-bottom: 0;
+  border-bottom: 1px dotted #475c98;
+}
+.aboutthevenues h3 {
+  color: #d33682;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+}

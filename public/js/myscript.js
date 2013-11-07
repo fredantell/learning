@@ -7,6 +7,12 @@ $(document).ready(function() {
 
   //automatically expand dropdown menu without requiring a click
   $('ul.nav li.dropdown').hover(toggleDropDown, toggleDropDown);
+  //It seems as if bootstrap markup makes it so that the "all artists" dropdown toggle
+  //does not follow the link when clicked.  So, add in an event handler to send it to
+  //its logical destination and thereby make the UI a bit friendlier.
+  $('ul.nav li.dropdown a.dropdown-toggle').on('click', function(e) {
+    window.location.pathname = "artists";
+  });
 
   //automatically highlight the appropriate nav element
   //this works because the build function for each page

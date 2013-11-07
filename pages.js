@@ -37,7 +37,7 @@ var buildHTMLHead = function(pageTitle) {
   "<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>" +
   "<link href='./css/bootstrap.css' rel='stylesheet'>" +
   '<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">' +
-  '<link href="./css/styles.css" rel="stylesheet">' +
+  '<link href="./css/mystyles.css" rel="stylesheet">' +
   '</head>' +
   '<body id="' + pageTitle + '">';
 
@@ -69,7 +69,7 @@ var buildHeader = function() {
       '          <li><a href="venuetravel">Venue/Travel</a></li>' +
       '          <li><a href="schedule">Schedule</a></li>' +
       '          <li class="dropdown">' +
-      '            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All artists<span class="caret"></span></a>' +
+      '            <a class="dropdown-toggle" data-toggle="dropdown" href="artists">All artists<span class="caret"></span></a>' +
       '            <ul class="dropdown-menu">' +
       '              <li><a href="artists">All artists</a></li>' +
       '              <li class="divider"></li>' +
