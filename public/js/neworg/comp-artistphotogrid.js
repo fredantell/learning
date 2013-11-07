@@ -17,7 +17,7 @@ var buildPhotoGridArtist = function() {
 
 };
 
-exports.buildPhotoGrid = function() {
+var buildPhotoGrid = function() {
   var html = '' +
     '<div class="component photogrid clearfix">' +
     buildPhotoGridArtist() +
@@ -25,3 +25,5 @@ exports.buildPhotoGrid = function() {
 
   return html;
 };
+
+module.exports = buildPhotoGrid;

@@ -7,8 +7,6 @@
 //--------------------------------------
 //--------------------------------------
 var fs = require('fs');
-var articles = require('./public/js/articles.js');
-var asides = require('./public/js/asides.js');
 var siteFns = require('./public/js/neworg/site-functions.js');
 
 
@@ -115,6 +113,12 @@ var buildFooter = function() {
 
 var buildBodyIndex = function() {
   var buildCarousel = require('./public/js/neworg/comp-carousel.js');
+  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
+  var mainContent = require('./public/js/neworg/comp-main.js');
+  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  var register = require('./public/js/neworg/comp-register.js');
+  var aboutTheVenue = require('./public/js/neworg/comp-aboutthevenue.js');
 
   var html = '' +
   '<section class="container">\n' +
@@ -128,14 +132,14 @@ var buildBodyIndex = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-8">\n' +
-        articles.main() +
-        articles.aboutTheArtists() +
-        articles.aboutTheVenue() +
+        mainContent.article() +
+        aboutTheArtists.article() +
+        aboutTheVenue.article() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
-        asides.register() +
-        asides.photosLastYear() +
-        asides.schedule() +
+        register.aside() +
+        photosOfLastYear.aside() +
+        scheduleContent.aside() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
@@ -146,6 +150,12 @@ var buildBodyIndex = function() {
 };
 
 var buildBodyVenues = function() {
+  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
+  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  var register = require('./public/js/neworg/comp-register.js');
+  var allVenues = require('./public/js/neworg/comp-allvenues.js');
+
   var html = '' +
   '<section class="container">\n' +
   '  <div class="content row">\n' +
@@ -157,13 +167,13 @@ var buildBodyVenues = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-8">\n' +
-        articles.allVenues() +        
+        allVenues.article() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
-        asides.register() +
-        asides.photosLastYear() +
-        asides.aboutTheArtists() +
-        asides.schedule() +
+        register.aside() +
+        photosOfLastYear.aside() +
+        aboutTheArtists.aside() +
+        scheduleContent.aside() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
@@ -174,6 +184,11 @@ var buildBodyVenues = function() {
 };
 
 var buildBodySchedule = function() {
+  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
+  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  var register = require('./public/js/neworg/comp-register.js');
+
   var html = '' +
   '<section class="container">\n' +
   '  <div class="content row">\n' +
@@ -185,12 +200,12 @@ var buildBodySchedule = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-8">\n' +
-        articles.schedule() +
+        scheduleContent.article() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
-        asides.register() +
-        asides.photosLastYear() +
-        asides.aboutTheArtists() +
+        register.aside() +
+        photosOfLastYear.aside() +
+        aboutTheArtists.aside() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
@@ -201,6 +216,11 @@ var buildBodySchedule = function() {
 };
 
 var buildBodyArtists = function() {
+  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  var register = require('./public/js/neworg/comp-register.js');
+  var allArtists = require('./public/js/neworg/comp-allartists.js');
+
   var html = '' +
   '<section class="container">\n' +
   '  <div class="content row">\n' +
@@ -212,12 +232,12 @@ var buildBodyArtists = function() {
   '<section class="container">\n' +
   '  <div class="content row">\n' +
   '    <section class="main col col-lg-8 col-md-8">\n' +
-        articles.allArtists() +
+        allArtists.article() +
   '    </section><!-- main -->\n' +
   '    <section class="sidebar col col-lg-4 col-md-4">' +
-        asides.register() +
-        asides.photosLastYear() +
-        asides.schedule() +        
+        register.aside() +
+        photosOfLastYear.aside() +
+        scheduleContent.aside() +
   '    </section><!--sidebar-->' +
   '  </div><!-- content -->\n' +
   '</section><!-- container -->\n' +
@@ -228,6 +248,10 @@ var buildBodyArtists = function() {
 };
 
 var buildBodyRegister = function() {
+  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  var register = require('./public/js/neworg/comp-register.js');
+
   var html = '' +
     '<section class="container">\n' +
     '  <div class="content row">\n' +
@@ -239,11 +263,11 @@ var buildBodyRegister = function() {
     '<section class="container">\n' +
     '  <div class="content row">\n' +
     '    <section class="main col col-lg-8 col-md-8">\n' +
-    articles.register() +
+    register.article() +
     '    </section><!-- main -->\n' +
     '    <section class="sidebar col col-lg-4 col-md-4">' +
-    asides.photosLastYear() +
-    asides.schedule() +
+    photosOfLastYear.aside() +
+    scheduleContent.aside() +
     '    </section><!--sidebar-->' +
     '  </div><!-- content -->\n' +
     '</section><!-- container -->\n' +

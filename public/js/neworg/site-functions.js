@@ -9,3 +9,7 @@ exports.getArtistsObj = function() {
   artists = artists.artists;
   return artists;
 };
+
+exports.capitalize = function(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
