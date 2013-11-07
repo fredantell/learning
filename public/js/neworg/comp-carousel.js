@@ -1,4 +1,4 @@
-var projVars = require('./global-variables.js')
+var projVars = require('./site-variables.js')
 var fs = require('fs');
 
 var buildFeatureCarousel = function(path) {

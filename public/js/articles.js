@@ -1,4 +1,4 @@
-var helper = require('./helper.js');
+var siteFns = require('./neworg/site-functions.js');
 var fs = require('fs');
 
 exports.main = function() {
@@ -17,7 +17,7 @@ exports.aboutTheArtists = function() {
  '   <p>The Roux Academy gets thousands of submissions every year for artists interesting in participating in the CAC exhibits, and selects approximately 200 distinct pieces of contemporary art for display in their collective exhibit.</p>' +
  '   <p class="hidden-sm hidden-xs">In addition, 12 individuals are honored as Featured Artists - each being granted his or her own exhibit hall to display entire collections or themed pieces. Each Featured Artist has an opportunity to speak at the conference to share his or her vision, perspective, and techniques with conference attendees. It is truly an honor to be a CAC Featured Artist and many past students artists who were featured at CAC have gone on to brilliant careers in art.' +
  '   </p>' +
-      helper.buildPhotoGrid() +
+      require('./neworg/comp-artistphotogrid.js').buildPhotoGrid() +
  '   <a href="artists" class="btn btn-primary">about the artists</a>' +
  '</article><!--aboutTheArtists-->';
 
@@ -124,7 +124,7 @@ function createScheduleTabContent(schedule, day) {
 }
 
 function fetchScheduleData() {
-  var artists = helper.getArtistsObj();
+  var artists = siteFns.getArtistsObj();
   var schedule = require('../mock_api/classes.json');
 
   //make artist lookup table
@@ -220,7 +220,7 @@ exports.allArtists = function() {
 
 
 function buildScrollSpyNavLIs() {
-  var artists = helper.getArtistsObj();
+  var artists = siteFns.getArtistsObj();
   var html = '';
   
   artists.forEach(function(artist) {
@@ -233,7 +233,7 @@ function buildScrollSpyNavLIs() {
 }
 
 function buildArtistInfoforAllArtists() {
-  var artists = helper.getArtistsObj();
+  var artists = siteFns.getArtistsObj();
   var artistImgPath = 'img/artists/';
   var artworkImgPath = 'img/artwork/';
   var html = '';

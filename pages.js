@@ -9,7 +9,7 @@
 var fs = require('fs');
 var articles = require('./public/js/articles.js');
 var asides = require('./public/js/asides.js');
-var helper = require('./public/js/helper.js');
+var siteFns = require('./public/js/neworg/site-functions.js');
 
 
 var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
@@ -75,7 +75,7 @@ var buildHeader = function() {
       '            <ul class="dropdown-menu">' +
       '              <li><a href="artists">All artists</a></li>' +
       '              <li class="divider"></li>' +
-                     listOfIndividualArtistLIs(helper.getArtistsObj()) +
+                     listOfIndividualArtistLIs(siteFns.getArtistsObj()) +
       '            </ul><!-- dropdown menu -->' +
       '          </li><!-- dropdown class -->' +
       '          <li><a href="register">Register</a></li>' +
@@ -104,7 +104,7 @@ var buildFooter = function() {
   '  </footer>' +
   // '</section><!-- footer container -->' +
   '<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>' +
-  '<script src="lib/bootstrap/js/bootstrap.js"></script>' +
+  '<script src="js/bootstrap.js"></script>' +
   '<script src="/js/myscript.js"></script>' +
   '</section><!-- end section.container after <body> tag -->' +
   '</body>' +
