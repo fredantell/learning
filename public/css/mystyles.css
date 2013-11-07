@@ -34,9 +34,6 @@ p {
 .main {
   background: #fdf5e3;
 }
-.navbar {
-  margin-bottom: 0;
-}
 .carousel {
   margin-bottom: 0;
 }
@@ -57,9 +54,15 @@ aside h2 {
   border-bottom: 1px dotted #475c98;
 }
 .navbar {
+  margin: 0 -30px;
   border-right: none;
   border-left: none;
   border-radius: 0;
+}
+@media (max-width: 767px) {
+  .navbar ul li a {
+    padding-left: 60px;
+  }
 }
 #branding img {
   margin: 10px 0 5px 25px;
@@ -91,4 +94,68 @@ aside h2 {
   padding: 0;
   margin: 0;
   font-size: 1.5em;
+}
+.nav-tabs li a {
+  color: #475c98;
+}
+.nav-tabs li a:hover {
+  background: #d33682;
+  color: white;
+}
+.nav-tabs li.active a {
+  background: #fdf5e3;
+  color: #d33682;
+  font-weight: bold;
+}
+div.media-body h3,
+div.media-body h4 {
+  margin: 0;
+  padding: 0;
+}
+div.media-body h3 {
+  color: #d33682;
+  line-height: 1em;
+}
+div.media-body p {
+  padding: 0;
+  padding-top: 10px;
+}
+.photogrid img {
+  width: 96px;
+  margin: 0 5px 5px 0;
+  cursor: pointer;
+}
+@media (max-width: 990px) {
+  .photogrid img {
+    width: 64px;
+  }
+}
+.artistInfo article,
+.artistInfo p,
+.artistInfo h1 {
+  padding: 0 2%;
+}
+.artistInfo .photogrid img {
+  width: 72px;
+  margin: 0 5px 5px 0;
+  cursor: pointer;
+}
+.artistInfo h3 {
+  color: #d33682;
+}
+footer nav.col-lg-12 {
+  padding: 0;
+}
+footer ul.breadcrumb {
+  background: #b02669;
+  margin: 0 auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+footer ul.breadcrumb li {
+  text-shadow: none;
+}
+footer ul.breadcrumb li a {
+  color: white;
 }
