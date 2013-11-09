@@ -7,7 +7,7 @@
 //--------------------------------------
 //--------------------------------------
 var fs = require('fs');
-var siteFns = require('./public/js/neworg/site-functions.js');
+var siteFns = require('./public/js/serverside/site-functions.js');
 
 
 var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
@@ -112,13 +112,13 @@ var buildFooter = function() {
 };
 
 var buildBodyIndex = function() {
-  var buildCarousel = require('./public/js/neworg/comp-carousel.js');
-  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
-  var mainContent = require('./public/js/neworg/comp-main.js');
-  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
-  var register = require('./public/js/neworg/comp-register.js');
-  var aboutTheVenue = require('./public/js/neworg/comp-aboutthevenue.js');
+  var buildCarousel = require('./public/js/serverside/comp-carousel.js');
+  var aboutTheArtists = require('./public/js/serverside/comp-abouttheartists.js');
+  var mainContent = require('./public/js/serverside/comp-main.js');
+  var scheduleContent = require('./public/js/serverside/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/serverside/comp-photoslastyear.js');
+  var register = require('./public/js/serverside/comp-register.js');
+  var aboutTheVenue = require('./public/js/serverside/comp-aboutthevenue.js');
 
   var html = '' +
   '<section class="container">\n' +
@@ -150,11 +150,11 @@ var buildBodyIndex = function() {
 };
 
 var buildBodyVenues = function() {
-  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
-  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
-  var register = require('./public/js/neworg/comp-register.js');
-  var allVenues = require('./public/js/neworg/comp-allvenues.js');
+  var aboutTheArtists = require('./public/js/serverside/comp-abouttheartists.js');
+  var scheduleContent = require('./public/js/serverside/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/serverside/comp-photoslastyear.js');
+  var register = require('./public/js/serverside/comp-register.js');
+  var allVenues = require('./public/js/serverside/comp-allvenues.js');
 
   var html = '' +
   '<section class="container">\n' +
@@ -184,10 +184,10 @@ var buildBodyVenues = function() {
 };
 
 var buildBodySchedule = function() {
-  var aboutTheArtists = require('./public/js/neworg/comp-abouttheartists.js');
-  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
-  var register = require('./public/js/neworg/comp-register.js');
+  var aboutTheArtists = require('./public/js/serverside/comp-abouttheartists.js');
+  var scheduleContent = require('./public/js/serverside/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/serverside/comp-photoslastyear.js');
+  var register = require('./public/js/serverside/comp-register.js');
 
   var html = '' +
   '<section class="container">\n' +
@@ -216,10 +216,10 @@ var buildBodySchedule = function() {
 };
 
 var buildBodyArtists = function() {
-  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
-  var register = require('./public/js/neworg/comp-register.js');
-  var allArtists = require('./public/js/neworg/comp-allartists.js');
+  var scheduleContent = require('./public/js/serverside/comp-schedule.js');
+  var photosOfLastYear = require('./public/js/serverside/comp-photoslastyear.js');
+  var register = require('./public/js/serverside/comp-register.js');
+  var allArtists = require('./public/js/serverside/comp-allartists.js');
 
   var html = '' +
   '<section class="container">\n' +
@@ -248,9 +248,9 @@ var buildBodyArtists = function() {
 };
 
 var buildBodyRegister = function() {
-  var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  //var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
-  var register = require('./public/js/neworg/comp-register.js');
+  var scheduleContent = require('./public/js/serverside/comp-schedule.js');
+  //var photosOfLastYear = require('./public/js/serverside/comp-photoslastyear.js');
+  var register = require('./public/js/serverside/comp-register.js');
 
   var html = '' +
     '<section class="container">\n' +

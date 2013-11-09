@@ -62,7 +62,6 @@ function buildArtistInfoforAllArtists() {
       '  <img class="pull-left img-rounded" src="' + artistImgPath + artist.shortname + '_tn.jpg" alt="Photo of ' + artist.name + '">' +
       '  <div class="media-body">' +
       artist.bio +
-      artist.biolong +
       '    <section class="modalphotos photogrid">' +
       '      <h3>Artwork</h3>' +
       buildArtistArtworkTNs(artist, artworkImgPath) +
@@ -96,12 +95,12 @@ function buildArtistArtworkTNs(artist, path) {
 
   //return an empty string and skip this artist if he has no artwork files
   if (typeof files === 'undefined' || files.length < 1) {
-    console.log("No artwork for this artist: ", artist.name);
+    console.log('No artwork for this artist: ', artist.name);
     return '';
   }
 
   for (var i = 0; i < files.length; i++) {
-    var num = i+1; //images are not 0 indexed
+    var num = i + 1; //images are not 0 indexed
     //turn 5 into 05, etc;
     if (num < 10) {
       num = '0' + num.toString();

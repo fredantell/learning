@@ -12,7 +12,7 @@ $(document).ready(function() {
   //does not follow the link when clicked.  So, add in an event handler to send it to
   //its logical destination and thereby make the UI a bit friendlier.
   $('ul.nav li.dropdown a.dropdown-toggle').on('click', function(e) {
-    window.location.pathname = "artists";
+    window.location.pathname = 'artists';
   });
 
   //automatically highlight the appropriate nav element
@@ -29,7 +29,6 @@ $(document).ready(function() {
 
   //show modals
   $('.modalphotos img').on('click', function(e) {
-
     var smImageSrc = e.target.src.toString();
     smImageSrc = smImageSrc.slice(smImageSrc.indexOf('img'), smImageSrc.length);
     var lgImageSrc = smImageSrc.slice(0, smImageSrc.length - 7) + '.jpg';
