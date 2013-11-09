@@ -163,6 +163,10 @@ div.media-body {
   }
 }
 
+section.artistlist .modalphotos img {
+  width: 56px;
+}
+
 .artistInfo {
   article, p, h1 {
     padding: 0 2%;
@@ -182,7 +186,7 @@ footer {
     padding: 0;
   }
   ul.breadcrumb {
-    background: darken(@pink, 10%);
+    background: @purple;
     margin: 0 auto;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -196,6 +200,66 @@ footer {
   }
 }
 
-.navbar .nav>li>.dropdown-menu {
-
+//For some reason the $('body').height() is greater than $(window).height()
+//This must break some assumption regarding the scrollbar on the page
+//and as a result this is causing the bootstrap scrollspy to malfunction.  It's worth noting
+//that from the user's perspective nothing is out of ordinary with the scrollbar.
+//Setting body's height to 100% fixes the problem.  Can't find anywhere in source
+//where body's height is being set otherwise.
+body {
+  height: 100%;
 }
+#artistNavList .nav {
+  background: @purple;
+  margin-top: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  @media (max-width: 979px) {
+    width: 15%;
+    max-width: 120px;
+  }
+  @media (min-width: 980px) and (max-width: 1199px) {
+    width: 13%;
+    min-width: 120px;
+  }
+  @media (min-width: 1200px) {
+    width: 13%;
+    max-width: 180px;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid dark(@purple 10%);
+    border-top: 1px solid lighten(@purple, 10%);
+  }
+  li.active {
+    background: @pink;
+  }
+  li:first-child {
+    border-top: none;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+  }
+  li:last-child {
+    border-bottom: none;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+#artistNavList .nav li {
+  a {
+    color: white;
+    padding-left: 10px;
+  }
+  a:hover {
+    background: @yellow;
+    color: black;
+  }
+}
+

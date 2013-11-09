@@ -9,14 +9,14 @@ allArtists.article = function() {
     '<section class="artistlist">' +
     '  <div id="artistindex" class="row">' +
     '' +
-    '      <section class="clearfix col col-md-3 hidden-xs hidden-sm" id="artistNavList">' +
+    '      <nav class="nav clearfix col col-md-3 hidden-xs hidden-sm" id="artistNavList">' +
     '        <ul class="nav nav-stacked affix">' +
     buildScrollSpyNavLIs() +
 // '          <li class="artist">' +
 // '            <a href="#artistName3">Artist Name</a>' +
 // '          </li>' +
     '        </ul>' +
-    '      </section><!-- section#artistNavList -->' +
+    '      </nav><!-- section#artistNavList -->' +
     '' +
     '      <section class="col col-md-9">' +
     buildArtistInfoforAllArtists() +

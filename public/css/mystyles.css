@@ -130,6 +130,9 @@ div.media-body p {
     width: 64px;
   }
 }
+section.artistlist .modalphotos img {
+  width: 56px;
+}
 .artistInfo article,
 .artistInfo p,
 .artistInfo h1 {
@@ -147,7 +150,7 @@ footer nav.col-lg-12 {
   padding: 0;
 }
 footer ul.breadcrumb {
-  background: #b02669;
+  background: #475c98;
   margin: 0 auto;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -158,4 +161,61 @@ footer ul.breadcrumb li {
 }
 footer ul.breadcrumb li a {
   color: white;
+}
+body {
+  height: 100%;
+}
+#artistNavList .nav {
+  background: #475c98;
+  margin-top: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+@media (max-width: 979px) {
+  #artistNavList .nav {
+    width: 15%;
+    max-width: 120px;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  #artistNavList .nav {
+    width: 13%;
+    min-width: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  #artistNavList .nav {
+    width: 13%;
+    max-width: 180px;
+  }
+}
+#artistNavList .nav li {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid dark(#475c98 10%);
+  border-top: 1px solid #5e74b4;
+}
+#artistNavList .nav li.active {
+  background: #d33682;
+}
+#artistNavList .nav li:first-child {
+  border-top: none;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+#artistNavList .nav li:last-child {
+  border-bottom: none;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+#artistNavList .nav li a {
+  color: white;
+  padding-left: 10px;
+}
+#artistNavList .nav li a:hover {
+  background: #fdad22;
+  color: black;
 }
