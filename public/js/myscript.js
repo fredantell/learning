@@ -5,8 +5,9 @@ $(document).ready(function() {
     $(this).find('ul.dropdown-menu').slideToggle(100);
   }
 
-  //automatically expand dropdown menu without requiring a click
+  //automatically expand main nav dropdown menu without requiring a click
   $('ul.nav li.dropdown').hover(toggleDropDown, toggleDropDown);
+
   //It seems as if bootstrap markup makes it so that the "all artists" dropdown toggle
   //does not follow the link when clicked.  So, add in an event handler to send it to
   //its logical destination and thereby make the UI a bit friendlier.
@@ -28,6 +29,7 @@ $(document).ready(function() {
 
   //show modals
   $('.modalphotos img').on('click', function(e) {
+
     var smImageSrc = e.target.src.toString();
     smImageSrc = smImageSrc.slice(smImageSrc.indexOf('img'), smImageSrc.length);
     var lgImageSrc = smImageSrc.slice(0, smImageSrc.length - 7) + '.jpg';
@@ -50,6 +52,39 @@ $(document).ready(function() {
 
   });
 
+  var expandScheduleAccordionIfRoom = function() {
+    'use strict';
+    //if the page isn't using the schedule aside, then return
+    if ($('section.sidebar aside.schedule').length === 0) {
+      return;
+    }
+
+    var heightofDoc = $('body')[0].scrollHeight;
+    var panels = [
+      '#collapseMonday',
+      '#collapseTuesday',
+      '#collapseWednesday',
+      '#collapseThursday',
+      '#collapseFriday'
+      ];
+    var lastPanel = 'a.accordion-toggle[href=' + panels[panels.length - 1] + ']';
+    lastPanel = $(lastPanel);
+
+    for (var i = 0; i < panels.length; i++) {
+      var lastPanelOffset = lastPanel.offset().top;
+      if (lastPanelOffset < heightofDoc - 100) {
+        $(panels[i]).toggleClass('in').toggleClass('collapse');
+      }
+    }
+  }();
+
+  //Add bootstrap classes to photos
+  $('aside.photosLastYear img').addClass('img-thumbnail');
+  $('section.artistlist .modalphotos img').addClass('img-circle');
+  $('article.articleAboutTheArtists img').addClass('img-circle');
+
+  //automatically select the tabbed content for Monday on teh schedule page
+  //if the user has not explicitly requested a day
   var path = window.location.pathname;
   var schedHash = window.location.hash || '#Monday';
   if (path === '/schedule' && schedHash) {
