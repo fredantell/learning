@@ -14,7 +14,7 @@ var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
   var html = '';
   arrayOfArtistObjs.forEach(function(artistObj) {
     html += '\n' +
-        '<li><a href="artists/' + artistObj.shortname +
+        '<li><a href="artists#' + artistObj.shortname +
         '">' + artistObj.name + '</a></li>';
   });
 
@@ -55,8 +55,8 @@ var buildHeader = function() {
       '  </div><!--modal-body-->' +
       '</section>' +
 
-      '<div class="content row">' +
-      '  <div class="col-lg-12">' +
+//      '<div class="content row">' +
+//      '  <div class="col-lg-12">' +
       '    <header class="clearfix">' +
 
       '      <section id="branding">' +
@@ -80,9 +80,9 @@ var buildHeader = function() {
       '        </ul><!-- nav -->' +
       '      </section><!-- navbar -->' +
 
-      '    </header><!-- clearfix header -->' +
-      '  </div><!-- column -->' +
-      '</div><!-- content -->';
+      '    </header><!-- clearfix header -->';
+//      '  </div><!-- column -->' +
+//      '</div><!-- content -->';
 
   return html;
 };
@@ -249,7 +249,7 @@ var buildBodyArtists = function() {
 
 var buildBodyRegister = function() {
   var scheduleContent = require('./public/js/neworg/comp-schedule.js');
-  var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
+  //var photosOfLastYear = require('./public/js/neworg/comp-photoslastyear.js');
   var register = require('./public/js/neworg/comp-register.js');
 
   var html = '' +
@@ -266,7 +266,7 @@ var buildBodyRegister = function() {
     register.article() +
     '    </section><!-- main -->\n' +
     '    <section class="sidebar col col-lg-4 col-md-4">' +
-    photosOfLastYear.aside() +
+    register.aside() +
     scheduleContent.aside() +
     '    </section><!--sidebar-->' +
     '  </div><!-- content -->\n' +
