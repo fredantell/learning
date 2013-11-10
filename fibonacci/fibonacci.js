@@ -1,8 +1,9 @@
 
 /*
  Two Solutions to computing fibonacci numbers.
- One uses recursion and the other uses a loop
- Both necessarily make use of closure.
+ One uses recursion and the other uses a loop.
+ Both necessarily make use of closure to leverage
+ memoization.
  */
 
 var fibv1 = (function() {
