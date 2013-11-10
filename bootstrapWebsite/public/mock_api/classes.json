@@ -1,0 +1,138 @@
+{
+    "Monday": {
+        "day": "Monday",
+        "overview": {
+            "header": "Art in Full Color",
+            "description": "The first day of CAC events and exhibits is kicked off under the theme of Art in Full Color From a demonstration in graffiti art on a wall of the  Rousseau Room, to the exhibit of colorful glazed modern glassware in the Dover Hall, Art in Full Color will get CAC started in full swing!"
+        },
+        "events": [
+            {
+                "artist_sn": "LaVonne_LaRue",
+                "time": "9:30-10:30am",
+                "title": "Art in unexpected Places",
+                "location": "Elizabeth Hall",
+                "description": "Watch LaVonne L. LaRue, a Chicago graffiti artist share her love and skill of mural art on Monday's schedule, as she starts the painting of a 20-foot high wall in the Rousseau Room of Hotel Contempo, which will be finished at the end of the conference. Make sure to show up a bit early, as this session will be standing-room only."
+            },
+            {
+                "artist_sn": "Lorenzo_Garcia",
+                "time": "11:00am-1:00pm",
+                "title": "Art in Full Bloom",
+                "location": "Victoria Hall",
+                "description": "Drawing and painting flowers may seem like a first-year art student's assignment, but Lorenzo Garcia brings depth, shadows, light, and color to new heights with his unique technique of painting on canvas with ceramic glaze. This session is sure to be a hit with mixed media buffs."
+            },
+            {
+                "artist_sn": "none",
+                "time": "2:30-4:00pm",
+                "title": "Still Life",
+                "location": "Dennison Hall",
+                "description": "Grab your pencils, charcoal, acrylics, watercolors, or whatever painting tools suit your fancy, and participate in the capturing of various still life settings that are staged all around Dennison Hall. You won't believe the wealth and depth of choices."
+            }
+        ]
+    },
+    "Tuesday": {
+        "day": "Tuesday",
+        "overview": {
+            "header": "Water in Art",
+            "description": "Water in Art is the theme for the second day, as art students from around the world gather at the Fountain of Intrigue in the gardens of Hotel Contempo to create ice sculptures, and art lecturers discuss the use of water as an art material, and water as an art subject."
+        },
+        "events": [
+            {
+                "artist_sn": "Jennifer_Jerome",
+                "time": "9:30-10:30am",
+                "title": "Water in Art Kickoff Session",
+                "location": "Elizabeth Hall",
+                "description": "<p>Jennifer Jerome, a native of New Orleans, whose work has centered around abstract images that depict flooding and rebuilding, will talk about how the floods inspired her artistically, and how, despite the sadness of devastation and lives lost, her work also depicts the hope and togetherness of a community that has persevered.</p>"
+            },
+            {
+                "artist_sn": "Gerard_Donahue",
+                "time": "10:30am-1:00pm",
+                "title": "Ice Sculptures",
+                "location": "Fountain of Intrigue",
+                "description": "Get on your mittens and earmuffs, and join your fellow artists at the Fountain of Intrigue, in the Hotel Contempo gardens, where the ambient temperature has been turned down to allow the sculpting of ice into the most mysterious and beautiful of shapes. Gerard Kent Donahue will share his secrets for chiseling ice into a shape that your imagination has envisioned. There is an extra fee of $25 for the rental of the tools needed to sculpt ice, if you plan to participate. And we hope you do!"
+            },
+            {
+                "artist_sn": "Hillary_Goldwynn",
+                "time": "2:30-4:00pm",
+                "title": "Deep Sea Wonders",
+                "location": "Dennison Hall",
+                "description": "Hilary Goldywynn Post has been inspiring deep sea divers to paint what they experience under water, since she began diving at the early age of 14. Not only does she explain texture, color, and tools, but she also explains methods for capturing your under sea explorations in your mind for future expulsion onto canvas. And, even if snorkeling is as far under water as you're willing to go, Hilary's techniques will work just as well for you."
+            }
+        ]
+    },
+    "Wednesday": {
+        "day": "Wednesday",
+        "overview": {
+            "header": "",
+            "description": ""
+        },
+        "events": [
+            {
+                "artist_sn": "Barot_Bellingham",
+                "time": "9:30-10:30am",
+                "title": "The Un-Collection",
+                "location": "Elizabeth Hall",
+                "description": "Barot Bellingham's new collection is pieced together from seemingly unrelated individual works of varying topic. From portraits to landscapes to abstract, Barot does it all, and does it all well. The only unifying factor is the excellence in form, technique, color, and balance that exudes from each and every individual work in The Un-Collection. Meet Barot, and his undeniably original collection of art, and be forever enchanted."
+            },
+            {
+                "artist_sn": "Xhou_Ta",
+                "time": "10:45am-12:00pm",
+                "title": "Beyond the Naked Eye",
+                "location": "Dennison Hall",
+                "description": "Get a glimpse at the rare offerings in Xhou's exhibit, ranging from an exquisite skyscraper painted on a grain of rice, to a miniature sculpture of an oak tree filled with detailed animals, the size of a thimble. Items are shown on a large screen, using Xhou's patented rear-projection device that magnifies the image to reveal incredible detail. Beyond the Naked Eye is a fantastic exhibit that blends art and science in a most magical way."
+            },
+            {
+                "artist_sn": "none",
+                "time": "1:30-4:00pm",
+                "title": "The Business of Art",
+                "location": "Victoria Hall",
+                "description": "Rita Ellsworth, MBA has been coaching artists on the business of art for 20 years. She represents some of the world's most notable artists including Rayole Bordeoux, Janelle McKimble, and Tim Darnell. This session will include topics on getting noticed through unique marketing, negotiating contracts, tax deductions that make the most of your artist income, and achieving work/life balance as an independent contractor. This is an excellent opportunity to receive top-notch advice from a seasoned business advisor. And, the question and answer session is not to miss!"
+            }
+        ]
+    },
+    "Thursday": {
+        "day": "Thursday",
+        "overview": {
+            "header": "",
+            "description": ""
+        },
+        "events": [
+            {
+                "artist_sn": "Hassum_Harrod",
+                "time": "9:30-10:30am",
+                "title": "The Use and Absence of Color in Modern Art",
+                "location": "Elizabeth Hall",
+                "description": "<p>Hassum Harrod is a \"color specialist,\" in every sense of the phrase. His inherent ability to create color palettes that illuminate an image and allure an audience, has drawn praise from traditionalists as well as modern artists - no small feat in today's diverse art world. His master's thesis at San Francisco Art Academy is entitled \"Color Upon Color – The Mixing and Reinventing of Color.\" It is this thesis that prompted Hillford & Bilken to publish his solo-authored book on color, that will be used in undergraduate art programs throughout the world starting next year.</p><p>His session at CAC will be an offshoot of his new book and is expected to be standing-room only. So, grab a seat and be prepared for a lesson on color that you'll never forget.</p>"
+            },
+            {
+                "artist_sn": "Constance_Smith",
+                "time": "10:30am-1:00pm",
+                "title": "The Art of Salvaging",
+                "location": "Victoria Hall",
+                "description": "<p>Never was the phrase \"one person's trash is another person's treasure\" more accurate than when discussing Constance Olivia Smith's art methodology. While some of her creations are built using fine gemstones, the majority of her work relies upon the discards of a wasteful planet. From bottlecaps to paper scraps to mechanical parts – there is seemingly no refuse that hasn't been used in an original scrap art painting by Olivia. And while there are an increasing number of scrap artists in existence, none have the level of achievement that is so frequently observed in Olivia's creations.</p><p>In the Art of Salvaging, Olivia will share her talent for finding and selecting scrap materials, as well as the philosophy behind several of her more celebrated works of art. If you're interested in recycling and mixed media, this session will include a lively discussion of both, from the woman who Art International Digest calls the \"foremost queen of scrap art.\"</p>"
+            },
+            {
+                "artist_sn": "Riley_Rewington",
+                "time": "1:30-2:30pm",
+                "title": "The Art of Abstract",
+                "location": "Dennison Hall",
+                "description": "The leader of the MMA artistic movement in his hometown of Portland, Riley Rudolph Rewington draws a crowd wherever he goes. Mixing street performance, video, music, and traditional art, Riley has created some of the most unique and deeply poignant abstract works of his generation. Join Riley in Dennison Hall for an intimate discussion on The Art of Abstract, in which he shares his philosophies about modern abstract art, and critiques some of this own work – with complete candor and a healthy dose of personality."
+            }
+        ]
+    },
+    "Friday": {
+        "day": "Friday",
+        "overview": {
+            "header": "",
+            "description": ""
+        },
+        "events": [
+            {
+                "artist_sn": "none",
+                "time": "All day",
+                "title": "Open Exhibit and Meet the Artists",
+                "location": "Victoria, Dennison, and Elizabeth Halls",
+                "description": "Roam the exhibit halls freely throughout the day and get a closer look at the widely diverse art submissions from students all around the world. Go in a for a closer look at the pieces that really speak to you, and even talk one-on-one with some of today's most skilled and respected artists. It's an artist's day in paradise."
+            }
+        ]
+    }
+}
