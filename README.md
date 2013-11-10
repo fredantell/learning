@@ -8,10 +8,12 @@ practice using a specific approach.
 
 ###bootstrapWebsite
 
+This site is deployed at: http://shrouded-badlands-7922.herokuapp.com/
+
 This is an example site built alongside of a tutorial.  The original author
 wrote everything in html and used php includes.  It was a very well
-organized project, but the downside of the approach was that none of the
-markup was dynamic.  That meant data was mixed in with HTML.  It also
+organized project, but the consequence of that approach was that none of the
+markup was dynamic.  Data was mixed in with HTML.  It also
 meant that if there was 10 objects that needed to be represented, then
 the snippet was copy pasted 10 times to do so.
 
@@ -23,7 +25,7 @@ plain JS, but it's much more flexible and I think for now I prefer this
 approach.
 
 By using node it was also easier to split out the data from the markup
-and segregate it within JSON.  Where I could I tried to make things
+and segregate it within JSON.  Where I could, I tried to make things
 dynamic.  I'm happy with how it turned out and what I learned.  Going
 forward I'd like to incorporate some of this knowledge into a
 CRUD oriented app since this project didn't really require much
