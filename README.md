@@ -63,4 +63,4 @@ different functions.
 
 # License
 
-The contents of this repo are released under the [MIT License](https://github.com/oakmac/chessboardjs/blob/master/LICENSE).
+The contents of this repo are released under the [MIT License](https://github.com/fredantell/learning/blob/master/LICENSE).
