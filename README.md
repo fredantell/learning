@@ -6,6 +6,29 @@ practice using a specific approach.
 
 ## What is in the different directories?
 
+###bootstrapWebsite
+
+This is an example site built alongside of a tutorial.  The original author
+wrote everything in html and used php includes.  It was a very well
+organized project, but the downside of the approach was that none of the
+markup was dynamic.  That meant data was mixed in with HTML.  It also
+meant that if there was 10 objects that needed to be represented, then
+the snippet was copy pasted 10 times to do so.
+
+I rewrote the project in node.js using express.  I chose not to use a
+templating engine and instead used plain vanilla JS to construct the markup.
+The upshot was not being restricted to the conventions of a subsetted
+templating language.  There is admittedly a bit less readability using
+plain JS, but it's much more flexible and I think for now I prefer this
+approach.
+
+By using node it was also easier to split out the data from the markup
+and segregate it within JSON.  Where I could I tried to make things
+dynamic.  I'm happy with how it turned out and what I learned.  Going
+forward I'd like to incorporate some of this knowledge into a
+CRUD oriented app since this project didn't really require much
+problem solving for back end data.
+
 ###modalGallery
 
 I put this together to practice absolute centering of an element inside a
