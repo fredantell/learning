@@ -1,25 +1,7 @@
 'use strict';
 
-//--------------------------------------
-//--------------------------------------
-//----Aux functions for use in----------
-//-----builder functions below----------
-//--------------------------------------
-//--------------------------------------
 var fs = require('fs');
 var siteFns = require('./public/js/serverside/site-functions.js');
-
-
-var listOfIndividualArtistLIs = function(arrayOfArtistObjs) {
-  var html = '';
-  arrayOfArtistObjs.forEach(function(artistObj) {
-    html += '\n' +
-        '<li><a href="artists#' + artistObj.shortname +
-        '">' + artistObj.name + '</a></li>';
-  });
-
-  return html;
-};
 
 //--------------------------------------
 //--------------------------------------
@@ -73,7 +55,7 @@ var buildHeader = function() {
       '            <ul class="dropdown-menu">' +
       '              <li><a href="artists">All artists</a></li>' +
       '              <li class="divider"></li>' +
-                     listOfIndividualArtistLIs(siteFns.getArtistsObj()) +
+                     siteFns.listOfIndividualArtistLIs(siteFns.getArtistsObj()) +
       '            </ul><!-- dropdown menu -->' +
       '          </li><!-- dropdown class -->' +
       '          <li><a href="register">Register</a></li>' +
@@ -277,16 +259,6 @@ var buildBodyRegister = function() {
 
 };
 
-
-//--------------------------------------
-//--------------------------------------
-//---Potential Data for JSON------------
-//-------(Mock API)---------------------
-//--------------------------------------
-//--------------------------------------
-
-
-
 //--------------------------------------
 //--------------------------------------
 //----Builders for whole pages----------
@@ -419,7 +391,3 @@ exports.createPage = function(key) {
 
   return pageFns[key](key);
 };
-
-
-
-var loremText = 'Wowaweewa!  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';

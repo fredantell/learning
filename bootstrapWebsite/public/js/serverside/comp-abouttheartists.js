@@ -1,4 +1,3 @@
-var siteFns = require('./site-functions.js');
 var buildPhotoGrid = require('./comp-artistphotogrid.js');
 
 var aboutTheArtists = {};

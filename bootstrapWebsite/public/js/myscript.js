@@ -71,9 +71,8 @@ $(document).ready(function() {
 
     for (var i = 0; i < panels.length; i++) {
       var lastPanelOffset = lastPanel.offset().top;
-      if (lastPanelOffset < heightofDoc - 100) {
-        $(panels[i]).toggleClass('in').toggleClass('collapse');
-      }
+      if (lastPanelOffset > heightofDoc - 400) {continue;}
+      $(panels[i]).toggleClass('in').toggleClass('collapse');
     }
   }();
 
@@ -81,6 +80,7 @@ $(document).ready(function() {
   $('aside.photosLastYear img').addClass('img-thumbnail');
   $('section.artistlist .modalphotos img').addClass('img-circle');
   $('article.articleAboutTheArtists img').addClass('img-circle');
+  $('aside.asideAboutTheArtists img').addClass('img-circle');
 
   //automatically select the tabbed content for Monday on teh schedule page
   //if the user has not explicitly requested a day
