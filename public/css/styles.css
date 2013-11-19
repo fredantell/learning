@@ -54,7 +54,7 @@ body#jukebox .jukebox ul li {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #444;
-  background: rgba(80, 159, 150, 0.71) url('img/jukebox/media_btn.png') no-repeat left center;
+  background: rgba(80, 159, 150, 0.71) url('/img/jukebox/media_btn.png') no-repeat left center;
   background-position: 5px;
   text-align: center;
   cursor: pointer;
@@ -63,11 +63,11 @@ body#jukebox .jukebox ul li a {
   text-decoration: none;
 }
 body#jukebox .jukebox ul li.playing {
-  background: rgba(60, 119, 112, 0.71) url('img/jukebox/media_play_btn.png') no-repeat left center;
+  background: rgba(60, 119, 112, 0.71) url('/img/jukebox/media_play_btn.png') no-repeat left center;
   background-position: 5px;
 }
 body#jukebox .jukebox ul li.paused {
-  background: rgba(34, 68, 64, 0.71) url('img/jukebox/media_pause_btn.png') no-repeat left center;
+  background: rgba(34, 68, 64, 0.71) url('/img/jukebox/media_pause_btn.png') no-repeat left center;
   background-position: 5px;
 }
 body#snowman section.container,
