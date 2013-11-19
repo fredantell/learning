@@ -31,6 +31,20 @@ forward I'd like to incorporate some of this knowledge into a
 CRUD oriented app since this project didn't really require much
 problem solving for back end data.
 
+###JSEvents
+
+This site is deployed at: http://jsevents.herokuapp.com/
+
+I built these three mini projects alongside of a tutorial on events in JS.
+After watching the examples, I opened up a blank editor and wrote these to
+work with node.js using express as the server.
+
+Nothing here was too difficult.  It was fun to play around a bit with drag
+and drop and media events and get more practice in general.  I did run into
+some incidental complexity when the code ran perfectly on my localserver
+only to have several images fail to load when deployed due to case sensitivity
+of the filenames.
+
 ###modalGallery
 
 I put this together to practice absolute centering of an element inside a
