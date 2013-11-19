@@ -72,14 +72,14 @@ var artwork = {
     },
     {
       "artist": "LaVonne LaRue",
-      "filename": "Lavonne_Larue_02.jpg",
-      "thumbnail": "Lavonne_Larue_02_tn.jpg",
+      "filename": "Lavonne_LaRue_02.jpg",
+      "thumbnail": "Lavonne_LaRue_02_tn.jpg",
       "title": "Graffiti on Brick"
     },
     {
       "artist": "LaVonne LaRue",
-      "filename": "Lavonne_Larue_04.jpg",
-      "thumbnail": "Lavonne_Larue_04_tn.jpg",
+      "filename": "Lavonne_LaRue_04.jpg",
+      "thumbnail": "Lavonne_LaRue_04_tn.jpg",
       "title": "Village Oasis"
     },
     {
