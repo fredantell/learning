@@ -1,0 +1,134 @@
+//These are my own styles to override bootstrap
+//Src is /_css/mystyles.less
+
+//my colors
+@red:                   #BA83D4;
+@magenta:               #FDF5E3;
+@beige:                 #FDF5E3;
+@yellow:                #FDAD22;
+@purple:                #475C98;
+@darkblue:              #586E75;
+@pink:                  #D33682;
+
+//my fonts
+@headlineFontFamily:      "Bree Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@copyFontFamily:          Merriweather,Georgia, "Times New Roman", Times, serif;
+
+
+//////////////
+///Art Eliminator
+//////////////
+
+body#arteliminator {
+  background: hsla(173, 33%, 47%, 0.71);
+  color: lightcyan;
+  font-family: arial, sans-serif;
+
+  div.artElimContainer {
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  ul.grid {
+    display:    table;
+    margin: 0 auto;
+    padding: 0;
+
+  }
+  ul.grid li {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    height: 160px;
+    cursor: pointer;
+  }
+  ul.grid li img {
+    display: block;
+  }
+  div.largePic {
+    display: none;
+    position: relative;
+    height: 500px;
+  }
+  div.largePic img {
+    max-width: 100%;
+    max-height: 500px;
+    position: absolute;
+    margin: auto auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//////////////
+///Jukebox
+//////////////
+body#jukebox {
+  .jukebox ul {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    width: 200px;
+    padding: 0;
+    margin-left: 20px;
+
+  }
+
+  .jukebox ul li {
+    list-style-type: none;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #444;
+    background: hsla(173, 33%, 47%, 0.71) url('/img/jukebox/media_btn.png') no-repeat left center;
+    background-position: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .jukebox ul li a {
+    text-decoration: none;
+  }
+  .jukebox ul li.playing {
+    background: hsla(173, 33%, 35%, 0.71) url('/img/jukebox/media_play_btn.png') no-repeat left center;
+    background-position: 5px;
+  }
+  .jukebox ul li.paused {
+    background: hsla(173, 33%, 20%, 0.71) url('/img/jukebox/media_pause_btn.png') no-repeat left center;
+    background-position: 5px;
+  }
+}
+
+//////////////
+///Snowman
+//////////////
+
+body#snowman {
+
+  section.container, div.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+  }
+
+  div.board {
+    background: #FFF;
+    width: 1200px;
+    height: 1200px;
+    overflow: visible;
+  }
+  img#body {
+    position: relative;
+  }
+  img {
+    position: absolute;
+  }
+  [draggable] {
+    cursor: move;
+  }
+
+}

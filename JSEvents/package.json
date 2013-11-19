@@ -1,0 +1,11 @@
+{
+  "name": "JSEvents",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "Fred Antell",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.4"
+  }
+}

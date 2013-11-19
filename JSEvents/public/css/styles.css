@@ -1,0 +1,93 @@
+body#arteliminator {
+  background: rgba(80, 159, 150, 0.71);
+  color: lightcyan;
+  font-family: arial, sans-serif;
+}
+body#arteliminator div.artElimContainer {
+  margin: 0 auto;
+  width: 600px;
+}
+body#arteliminator ul.grid {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+}
+body#arteliminator ul.grid li {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  padding: 0;
+  display: block;
+  height: 160px;
+  cursor: pointer;
+}
+body#arteliminator ul.grid li img {
+  display: block;
+}
+body#arteliminator div.largePic {
+  display: none;
+  position: relative;
+  height: 500px;
+}
+body#arteliminator div.largePic img {
+  max-width: 100%;
+  max-height: 500px;
+  position: absolute;
+  margin: auto auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body#jukebox .jukebox ul {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  width: 200px;
+  padding: 0;
+  margin-left: 20px;
+}
+body#jukebox .jukebox ul li {
+  list-style-type: none;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #444;
+  background: rgba(80, 159, 150, 0.71) url('/img/jukebox/media_btn.png') no-repeat left center;
+  background-position: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+body#jukebox .jukebox ul li a {
+  text-decoration: none;
+}
+body#jukebox .jukebox ul li.playing {
+  background: rgba(60, 119, 112, 0.71) url('/img/jukebox/media_play_btn.png') no-repeat left center;
+  background-position: 5px;
+}
+body#jukebox .jukebox ul li.paused {
+  background: rgba(34, 68, 64, 0.71) url('/img/jukebox/media_pause_btn.png') no-repeat left center;
+  background-position: 5px;
+}
+body#snowman section.container,
+body#snowman div.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+}
+body#snowman div.board {
+  background: #FFF;
+  width: 1200px;
+  height: 1200px;
+  overflow: visible;
+}
+body#snowman img#body {
+  position: relative;
+}
+body#snowman img {
+  position: absolute;
+}
+body#snowman [draggable] {
+  cursor: move;
+}
