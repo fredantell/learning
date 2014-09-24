@@ -25,19 +25,15 @@ li {
     padding: 5px;
     overflow: hidden;
     position: relative;
-
-
+    transition: all 100ms;
+}
+li:hover {
+    transition: all 150ms;
+    transform: scale(1.1, 1.1) rotate(3deg);
 }
 img {
-    /* margin: -98px 0 0 -210px; */
-    /* top: 0px; */
     max-width: 100%;
 }
-
-
-
-
-
 
 
 .cf:before,
