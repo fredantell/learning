@@ -47,6 +47,8 @@ of the filenames.
 
 ###modalGallery
 
+This site is deployed at: http://modal-gallery.herokuapp.com/
+
 I put this together to practice absolute centering of an element inside a
 parent div using CSS and some simple interaction using JS.
 
