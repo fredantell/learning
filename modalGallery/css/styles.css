@@ -30,6 +30,7 @@ li {
 li:hover {
     transition: all 150ms;
     transform: scale(1.1, 1.1) rotate(3deg);
+    cursor: pointer;
 }
 img {
     max-width: 100%;
