@@ -4,7 +4,7 @@ This repo contains random exercises I have written in the process of studying
 JS.  Often there are better solutions to the problem at hand, but I wanted to
 practice using a specific approach.
 
-## What is in the different directories?
+## What projects are in the different directories?
 
 ###bootstrapWebsite
 
